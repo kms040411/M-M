@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> MNM Recommendation Center! </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> [MNM Music & Movie Searching Center] </h3>
+    <form action = "/dosearch" method="post">
+	Music or Movie?</br>
+	<input type="radio" name="MoM" value="music" checked="checked"> Music
+	<input type="radio" name="MoM" value="movie"> Movie
+	<br>
+	<br>
+	
+    Which filter would you search for?</br>
+    <input type="radio" name="filter" value="name" checked="checked"> Name
+	<input type="radio" name="filter" value="genre"> Genre
+    <input type="radio" name="filter" value="producer"> Singer (or Director)
+    <div>
+        <label for="id"> Filter: </label>
+        <input type="text" name="text"/>
+    </div>
+    <div class="button">
+        <input type="submit" value="SEARCH!">
+    </div>
+    </form>
+    <form action = "/main.html" method="get">
+        <div class="button">
+            <input type="submit" value="BACK">
+        </div>
+    </form>
+    <br>
+    <p>
+        <strong>List of Music:</strong>
+        <%- mcontent %>
+    </p>
+    <p>
+        <strong>List of Movie:</strong>
+        <%- moviecontent %>
+    </p>
+</body>
+</html> 

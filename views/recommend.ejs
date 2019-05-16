@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> MNM Recommendation Center! </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> [MNM Music Recommendation Center] </h3>
+    <form action = "/addrecommendmusic" method="post">
+        Please enter name of your favorite music:
+        <div>
+            <label for="id"> Name: </label>
+            <input type="text" name="name"/>
+        </div>
+        <div class="button">
+            <input type="submit" value="ADD">
+        </div>
+    </form>
+    <br>
+    <form action = "/delrecommendmusic" method="post">
+        Please enter name of music that you want to delete:
+        <div>
+            <label for="id"> Name: </label>
+            <input type="text" name="name"/>
+        </div>
+        <div class="button">
+            <input type="submit" value="DELETE">
+        </div>
+    </form>
+    <br>
+    <p>
+        <strong>Favorite Musics:</strong>
+        <%- fcontent %>
+    </p>
+    <br>
+    <form action = "/domusicrecommend" method="post">
+        <div class="button">
+            <input type="submit" value="RECOMMEND">
+        </div>
+    </form>
+    <br>
+    <form action = "/main.html" method="get">
+        <div class="button">
+            <input type="submit" value="BACK">
+        </div>
+    </form>
+    <br>
+    <p>
+        <strong>List of Music:</strong>
+        <%- mcontent %>
+    </p>
+</body>
+</html> 

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> MNM Recommendation Center! </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h2> MNM Recommendation Center </h2>
+	<h4> Which service would you like to use? </h4>
+	Music or Movie Search:
+    <form action = "/search" method="post">
+        <div class="button">
+            <input type="submit" value="SEARCH">
+        </div>
+    </form>
+	<br>
+	Music Recommendation:
+    <form action = "/recommend" method="get">
+        <div class="button">
+            <input type="submit" value="RECOMMENDATION">
+        </div>
+    </form>
+    <br>
+    Movie Recommendation:
+    <form action = "/morecommend" method="get">
+        <div class="button">
+            <input type="submit" value="RECOMMENDATION">
+        </div>
+    </form>
+    <br>
+    <form action = "/logout" method="post">
+        <div class="button">
+            <input type="submit" value="LOGOUT">
+        </div>
+    </form>
+    <br>
+    <p>
+        <strong>List of Music:</strong>
+        <%- mcontent %>
+    </p>
+    <p>
+        <strong>List of Movie:</strong>
+        <%- moviecontent %>
+    </p>
+</body>
